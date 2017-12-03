@@ -1,0 +1,16 @@
+.item {
+    position: relative;
+}
+.time {
+    position: absolute;
+    top: 35px;
+    left: 43px;
+    font-size: 11px;
+}
+
+.btn-hide {
+    @extend .time;
+    left: 86px;
+    cursor: pointer;
+}
+

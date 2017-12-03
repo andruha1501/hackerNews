@@ -1,0 +1,8 @@
+<mat-list>
+  <mat-list-item class="item" *ngFor="let item of items | paginate: config; let i = index">{{numberItem(i)}}.&nbsp;
+    <a href="{{item.url}}">{{item.title}}</a>
+    <span class="time">{{item.time*1000 | date:'HH:mm'}}</span>
+    <span class="btn-hide" (click)="hideItem(item)">Hide</span>
+  </mat-list-item>
+</mat-list>
+<pagination-controls (pageChange)="onPageChange($event)"></pagination-controls>
