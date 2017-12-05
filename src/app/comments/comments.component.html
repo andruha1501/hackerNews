@@ -1,0 +1,35 @@
+<div *ngIf="item" class="item">
+  <div  [class.item-header]="item.descendants !== 0" [class.head-margin]="item.text">
+    <p *ngIf="item.url">
+      <a class="title" href="{{item.url}}">
+      {{item.title}}
+      </a>
+    </p>
+    <p *ngIf="!item.url">
+      <a class="title">
+      {{item.title}}
+      </a>
+    </p>
+    <div class="subtext">
+      <span>
+      {{item.score}} points by 
+        <a>{{item.by}}</a>
+      </span> 
+      <span [class.item-details]="item">
+        {{ item.time*1000 | date }}
+        <span> |
+          <a >
+            <span *ngIf="item.descendants !== 0">
+              {{item.descendants}}
+              <span *ngIf="item.descendants === 1">comment</span>
+              <span *ngIf="item.descendants > 1">comments</span>
+            </span>
+            <span *ngIf="item.descendants === 0">discuss</span>
+          </a>
+        </span>
+      </span> 
+    </div>
+  </div>
+  <p class="subject" [innerHTML]="item.text"></p>
+  <app-comment-tree itemKids="{{ item.kids }}" itemCount="{{ item.descendants }}"></app-comment-tree>
+</div>

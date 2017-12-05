@@ -1,0 +1,58 @@
+.item {
+  box-sizing: border-box;
+  padding: 10px 40px 0 40px;
+  z-index: 0;
+}
+
+.head-margin {
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 2px 0;
+}
+
+.subject {
+  word-wrap: break-word;
+  margin-top: 20px;
+}
+
+a {
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.title-block {
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 75px;
+}
+
+
+.subtext {
+  font-size: 12px;
+}
+
+
+.subtext a {
+  color: #3f51b5;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.item-details {
+  padding: 10px;
+}
+
+.item-header {
+  border-bottom: 2px solid #3f51b5;
+  padding-bottom: 10px;
+}

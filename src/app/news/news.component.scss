@@ -1,5 +1,5 @@
 .item {
-    position: relative;
+    position: relative; 
 }
 .time {
     position: absolute;
@@ -12,5 +12,9 @@
     @extend .time;
     left: 86px;
     cursor: pointer;
+}
+
+.is-load {
+    margin: 30px auto;
 }
 

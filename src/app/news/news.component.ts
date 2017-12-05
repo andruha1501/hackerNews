@@ -20,6 +20,7 @@ interface Item {
 export class NewsComponent implements OnInit {
   postsId: number[];
   items: Item[] = [];
+  isLoad: boolean = true;
   config: PaginationInstance = {
     itemsPerPage: 15,
     currentPage: 1
@@ -34,7 +35,11 @@ export class NewsComponent implements OnInit {
   }
 
   showItem(): void {
-    this.newsService.getItem(this.postsId,60).subscribe(success => this.items = success), error => console.error(error);
+    this.newsService.getItem(this.postsId,60).subscribe(success => {
+      this.items = success;
+      this.isLoad = false;
+    }), error => console.error(error);
+
     
     
   }

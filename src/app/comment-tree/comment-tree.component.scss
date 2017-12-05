@@ -1,0 +1,37 @@
+ul {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+li {
+  display: list-item;
+}
+
+a.more-button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3f51b5;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 35px 0;
+  vertical-align: middle;
+  &:hover {
+    background-color: #3f51b5;
+  }
+}
+
+
+.button-block {
+  text-align: center;
+}
+
+
+button:focus {
+  outline: 0;
+}
