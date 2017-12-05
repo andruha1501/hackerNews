@@ -12,7 +12,7 @@ export class CommentComponent implements OnInit {
   constructor(private newsService:NewsService) { }
 
   ngOnInit() {
-    this.newsService.getComments(this.commentID).subscribe(data => {
+    this.newsService.getObserveble(this.commentID).subscribe(data => {
       this.comment = data
     })
     this.collapse = false;

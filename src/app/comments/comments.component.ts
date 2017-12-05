@@ -15,7 +15,7 @@ export class CommentsComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.newsService.getComments(15531265).subscribe(data => {
+    this.newsService.getObserveble(15531265).subscribe(data => {
       this.item = data;});    
   }
 

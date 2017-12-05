@@ -24,9 +24,4 @@ export class NewsService {
     }
     return Observable.combineLatest(...array);
   }
-
-
-  getComments(id) {
-    return this.http.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json?print=pretty`);
-  }
 }
